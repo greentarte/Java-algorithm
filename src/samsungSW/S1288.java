@@ -8,16 +8,16 @@ public class S1288 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int T = sc.nextInt(); // Å×½ºÆ®ÄÉÀÌ½º
+		int T = sc.nextInt(); // í…ŒìŠ¤íŠ¸ì¼€ì´ìŠ¤
 		int seq = 1;
-		int N; // ÀÔ·Â°ª ÀúÀå º¯¼ö
+		int N; // ì…ë ¥ê°’ ì €ì¥ ë³€ìˆ˜
 		int gob;
 		int init;
 		String size;
 		Set<String> hs;
 
 		for (int i = 1; i <= T; i++) {
-			// ¾ç¼¼±â
+			// ì–‘ì„¸ê¸°
 			hs = new HashSet<String>();
 			N = sc.nextInt();
 			gob = 1;
@@ -27,7 +27,7 @@ public class S1288 {
 				N = init * (gob++);
 				size = "" + N;
 				for (int j = size.length(); j > 0; j--) {
-					System.out.println("ÀÔ·Â°ª    ----" + (int) (N / Math.pow(10, j - 1)));
+					//System.out.println("ì…ë ¥ê°’    ----" + (int) (N / Math.pow(10, j - 1)));
 					hs.add("" + (int) (N / Math.pow(10, j - 1)));
 					N=N%(int) Math.pow(10, j - 1);
 				}
