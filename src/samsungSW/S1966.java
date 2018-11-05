@@ -15,6 +15,7 @@ public class S1966 {
 		for(int i=1; i<=T; i++){
 			N=sc.nextInt();
 			arr=new int[N];
+			//make array
 			for(int j=0; j<N; j++){
 				arr[j]=sc.nextInt();
 			}
