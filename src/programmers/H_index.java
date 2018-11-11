@@ -21,9 +21,7 @@ public class H_index {
 	                }
 	            
 	            if(cnt>=h&& length-h<h){
-	                 
-	                	 answer=h;
-	                 
+	                answer=h;
 	                break;
 	            } else{
 	            	answer=h;
