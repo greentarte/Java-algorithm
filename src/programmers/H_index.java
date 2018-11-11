@@ -12,7 +12,7 @@ public class H_index {
 	        int cnt=0;
 	        int length=citations.length;
 	        Arrays.sort(citations);
-	        int h=citations[length-1];
+	        int h=citations.length;
 	        while(true){
 	             for(int i=length-1; i>=0; i--){
 	                if(citations[i]>=h){
