@@ -9,30 +9,30 @@ public class Iron_rod {
 	}
 	public static int solution(String arrangement) {
 		int answer=0;
-		//·¹ÀÌÀú À§Ä¡ ¹®ÀÚ·Î º¯°æ
+		//ë ˆì´ì € ìœ„ì¹˜ ë¬¸ìë¡œ ë³€ê²½
 		String result=arrangement.replace("()", "L");
-		//char¹è¿­·Î ÀüÈ¯ Å½»öÀ» ÆíÇÏ°Ô ÇÏ±â À§ÇØ¼­
+		//charë°°ì—´ë¡œ ì „í™˜ íƒìƒ‰ì„ í¸í•˜ê²Œ í•˜ê¸° ìœ„í•´ì„œ
 		boolean tmp=result.contains("L");
 		char[] total=result.toCharArray();
-		//¸·´ë±â¸¦ Ã£¾Æ¼­ ÀÚ¸£´Â ¹İº¹¹®
+		//ë§‰ëŒ€ê¸°ë¥¼ ì°¾ì•„ì„œ ìë¥´ëŠ” ë°˜ë³µë¬¸
 		while(tmp) {
-			//¸·´ë±â ½ÃÀÛÁöÁ¡
+			//ë§‰ëŒ€ê¸° ì‹œì‘ì§€ì 
 			int start=0;
-			//¸·´ë±â Á¾·áÁöÁ¡
+			//ë§‰ëŒ€ê¸° ì¢…ë£Œì§€ì 
 			int end=0;
-			//ºĞÇÒ°¹¼ö = ·¹ÀÌÀú°¹¼ö+1
+			//ë¶„í• ê°¯ìˆ˜ = ë ˆì´ì €ê°¯ìˆ˜+1
 			int cnt=0;
-			//¸·´ë±â À§Ä¡ Å½»ö
+			//ë§‰ëŒ€ê¸° ìœ„ì¹˜ íƒìƒ‰
 			for(int i=0; i<total.length; i++) {
-				//¸·´ë±â ½ÃÀÛÁ¡
+				//ë§‰ëŒ€ê¸° ì‹œì‘ì 
 				if(total[i]=='(')
 					start=i;
-				//¸·´ë±â Á¾·áÁ¡
+				//ë§‰ëŒ€ê¸° ì¢…ë£Œì 
 				else if(total[i]==')')
 					end=i;
-				//¸·´ë±â ¼º¸³Á¶°Ç
+				//ë§‰ëŒ€ê¸° ì„±ë¦½ì¡°ê±´
 				if(start<end) {
-					//¸·´ë±â¾È¿¡ ·¹ÀÌÁ® °¹¼ö Å½»ö
+					//ë§‰ëŒ€ê¸°ì•ˆì— ë ˆì´ì ¸ ê°¯ìˆ˜ íƒìƒ‰
 					for(int j=start; j<=end; j++) {
 						if(total[j]=='L')
 							cnt++;
@@ -41,11 +41,12 @@ public class Iron_rod {
 						total[start]='_';
 						total[end]='_';
 						answer+=cnt+1;
-						break; //Å½»ö for¹® ÁßÁö	
+						break; //íƒìƒ‰ forë¬¸ ì¤‘ì§€	
 					}
 				}
 			}
-			if(start==0||end ==0)
+			//
+			if(start==end)
 				break;
 		}
 		
