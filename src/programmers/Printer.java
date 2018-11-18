@@ -22,13 +22,13 @@ public class Printer {
 			
 		}
 //		System.out.println("-----------------------------");
-		Arrays.sort(result); //¿À¸§Â÷¼ø Á¤·Ä
+		Arrays.sort(result);
 //		for(int i=0; i<result.length; i++) {
 //			System.out.println(result[i]);
 //		}
 		//A 65
 		//location 2 -> C 67
-		//Å½»öÁ¶°Ç 65+location
+		//Ã…Â½Â»Ã¶ÃÂ¶Â°Ã‡ 65+location
 		start=(char)(start+location);
 		for (int i = result.length-1; i >-1 ; i--) {
 			if(result[i].substring(1,1).equals(start+"")){
